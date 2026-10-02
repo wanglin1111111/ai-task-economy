@@ -1,0 +1,39 @@
+{
+  "task_volume": {
+    "items": [
+      {"name": "商品短视频", "weekly_freq": 5, "versions_per_object": 8, "objects": 120, "build_pipeline": true},
+      {"name": "周度经营报告", "weekly_freq": 1, "versions_per_object": 1, "objects": 1, "build_pipeline": false}
+    ]
+  },
+  "metering": {
+    "unified_account": true,
+    "monthly_quota": true,
+    "cost_attribution": true
+  },
+  "pipeline": {
+    "stages": ["脚本", "生成", "剪辑", "分发"],
+    "feedback_loop": true,
+    "feedback_rounds_run": 2
+  },
+  "metrics": [
+    {"stage": "投放", "name": "点击成本", "direction": "down", "baseline": 1.0, "threshold": 0.82},
+    {"stage": "生产", "name": "素材复用率", "direction": "up", "baseline": 0.25, "threshold": 0.40},
+    {"stage": "生产", "name": "单条成本", "direction": "down", "baseline": 15.0, "threshold": 7.5}
+  ],
+  "expansion": {
+    "second_target": "",
+    "ledger_weeks": 2,
+    "metrics_stable": true
+  },
+  "investment_eval": {
+    "company": "Kuaizi",
+    "data_points": [
+      {"claim": "ARR接近10亿元(半年10倍)", "source": "self_report", "verified_independently": false},
+      {"claim": "9月Token调用较1月涨200倍", "source": "self_report", "verified_independently": false},
+      {"claim": "Stripe超70亿美元收购OpenRouter", "source": "third_party", "verified_independently": true},
+      {"claim": "18款视频生成产品8月Web访问5492万环比-4.3%", "source": "third_party", "verified_independently": true},
+      {"claim": "茶饮客户点击成本降18%", "source": "customer_relay", "verified_independently": false}
+    ],
+    "uses_only_verified": true
+  }
+}

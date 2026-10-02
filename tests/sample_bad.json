@@ -1,0 +1,33 @@
+{
+  "task_volume": {
+    "items": [
+      {"name": "月度品牌海报", "weekly_freq": 1, "versions_per_object": 1, "objects": 1, "build_pipeline": true}
+    ]
+  },
+  "metering": {
+    "unified_account": false,
+    "monthly_quota": true,
+    "cost_attribution": false
+  },
+  "pipeline": {
+    "stages": ["生成"],
+    "feedback_loop": false,
+    "feedback_rounds_run": 0
+  },
+  "metrics": [
+    {"stage": "生产", "name": "日产条数", "direction": "up", "baseline": 0, "threshold": 80}
+  ],
+  "expansion": {
+    "second_target": "第二渠道",
+    "ledger_weeks": 1,
+    "metrics_stable": false
+  },
+  "investment_eval": {
+    "company": "Kuaizi",
+    "data_points": [
+      {"claim": "年底ARR达20亿", "source": "expectation", "verified_independently": true},
+      {"claim": "客户转化率1.2%升到6.8%", "source": "customer_relay", "verified_independently": false}
+    ],
+    "uses_only_verified": false
+  }
+}
