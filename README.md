@@ -34,6 +34,9 @@ AI 应用商业化的任务驱动付费与 Token 经济技能：AI 公司卖的�
 ```bash
 python scripts/validate.py tests/sample_good.json   # 必须 exit 0
 python scripts/validate.py tests/sample_bad.json    # 必须 exit 1
+
+# 一行自验（正反向 + 退出码全覆盖，零依赖）
+python tests/test_validate.py
 ```
 
 ## 结构
